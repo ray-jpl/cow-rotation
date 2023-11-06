@@ -41,14 +41,6 @@ floor.material.side = THREE.DoubleSide;
 floor.rotation.x = (Math.PI/2);
 scene.add( floor ); 
 
-// // Picture background
-// var texture = THREE.ImageUtils.loadTexture( 'meme.jpg' );
-// var backgroundMesh = new THREE.Mesh(
-//   new THREE.PlaneGeometry(2, 2, 0),
-//   new THREE.MeshBasicMaterial({
-//       map: texture
-//   }));
-
 var planeGeometry = new THREE.PlaneGeometry(700, 300, 1, 1);
 var texture = new THREE.TextureLoader().load( 'meme.jpg' );
 var planeMaterial = new THREE.MeshLambertMaterial( { map: texture } );
@@ -57,12 +49,8 @@ plane.position.set(-200, 200, -200)
 plane.rotation.y = (Math.PI/4);
 scene.add(plane);
 
-
-
-
 console.log(scene);
 animate();
-
 function animate() {
     requestAnimationFrame(animate);
     cow.rotation.x += 0.01
